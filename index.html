@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- main css -->
+      <link rel="stylesheet" href="css/style.css">        
+
+      <!-- font awesome -->
+      <link rel="stylesheet" href="css/all.css">
+      <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+
+        
+      <title>to do app</title>
+        
+    </head>
+    <body>
+        <h3>To Do List</h3>
+        <input type="text" placeholder="Name...">
+        <button id="add">Add Item</button>
+        <div class="items">
+            <div class="item">
+                <h4>study hard</h4>
+                <i onclick="delitem()" class="far fa-times-circle"></i>
+                <i class="far fa-edit"></i>
+                <i class="far fa-check-circle"></i>
+            </div>
+        </div>
+        <button id="clear">Clear Item</button>
+        <script src="js/script.js"></script>
+    </body>
+</html>
