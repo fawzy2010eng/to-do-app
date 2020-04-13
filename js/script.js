@@ -16,9 +16,18 @@ function additem(){
         task.appendChild(content);                                  
         item.appendChild(task);
         var items = document.querySelector('div');
-        item.innerHTML = item.innerHTML + '<i onclick="delitem()" class="far fa-times-circle"></i>';
-        item.innerHTML = item.innerHTML + '<i class="far fa-edit"></i>';
-        item.innerHTML = item.innerHTML + '<i class="far fa-check-circle"></i>';
+        var i1 = document.createElement('I');
+        i1.classList = 'far fa-times-circle';        
+        i1.addEventListener('click',delitem);
+        var i2 = document.createElement('I');
+        i2.classList = 'far fa-edit';
+        i2.addEventListener('click',edititem);
+        var i3 = document.createElement('I');
+        i3.classList = 'far fa-check-circle';
+        i3.addEventListener('click',checkitem);        
+        item.appendChild(i1);
+        item.appendChild(i2);
+        item.appendChild(i3);
         items.appendChild(item);
         input.value = '';
     }else{
@@ -34,6 +43,20 @@ function clearitems(){
 
 //function for deleting item from the list
 function delitem(){
+    var item = this.parentElement;
+    item.parentElement.removeChild(item)
+}
+
+function checkitem(){
+    this.parentElement.firstChild.style.textDecoration = 'line-through';
+    this.parentElement.firstChild.style.color = 'gray';
+    this.style.color = 'rgba(187, 214, 155, 1)';
+    this.style.cursor = 'context-menu'
+}
+
+function edititem(){
+    var input = document.querySelector('input');
+    input.value = this.parentElement.firstChild.innerHTML;
     var item = this.parentElement;
     item.parentElement.removeChild(item)
 }
