@@ -1,61 +1,337 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    text-align: center
-}
-input{
-    margin-right: 0;
-    border: 1px solid #f5f5f5;
-    padding-left: 12px;
-    width: 300px;
-    height: 32px;
-    margin-bottom: 12px
-}
-button{
-    margin-left: 0;
-    background-color: #f5f5f5;
-    color: #bbd69b;
-    border: 1px solid #bbd69b;
-    height: 32px;
-    border-radius: 4px
-}
-button:hover{
-    background-color: #bbd69b;
-    color: black
-}
-button:last-of-type:hover{
-    background-color: red
-}
-.items{
     text-align: center;
-    width: 50%;
-    margin-left: 25%;
-/*    background-color: green*/
+    background-color: rgb(238,238,238);
+    font-family: 'Gochi Hand', cursive;
+
 }
-.item{
-    height: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
+.cacher{
+    position: fixed;
+    top: 60px;
+    width: 30%;
+    padding-top: 12px;
+    background-color: rgb(247,241,223);
+    z-index: 10;
+    transition: right 1s;
 }
-.item h4{
+.off{
+    right: -30%;
+}
+.on{
+    right: 0
+}
+.cacher .cartitem{
+    padding-left: 4%;
+    padding-top: 12px
+    width: 100%;
+    height: 50px
+}
+.cacher .cartitem img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
     float: left;
-    line-height: 6px
+    margin-right: 12px
 }
-.item i{
-    float: right;
-    margin-top: 16px;
+.cacher .cash{
+    float: left;
+    width: 50%;
+    height: 50px;
+    margin-right: 12%
+}
+.cacher .cash h4{
+    margin-top: 2px;
+    margin-bottom: 5px
+}
+.cacher .cash h5{
+    margin-top: 0
+}
+.cacher .cartitem i{
+    line-height: 32px;
+    color: #ef7998;
     cursor: pointer
 }
-i:nth-child(2){
-    color: red    
+.cacher .cartitem i:hover{
+    color: red
 }
-i:nth-child(4){
-    color: green
+.cacher h2{
+    font-size: 22px;
+    float: left;
+    margin-left: 20%;
+    margin-right: 20%
 }
 
-i:nth-child(3){
-    margin-left: 6px;
-    margin-right: 6px;
-    color: blue
+.cacher button{
+    font-family: 'Gochi Hand', cursive;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 17px;
+    width: 40%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 17px
+}
+.cacher button:first-of-type{
+    float: left;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+.cacher button:first-of-type:hover{
+    background-color: black;
+    color: #ef7998;    
+}
+.cacher button:last-of-type{
+    margin-right: 5%;
+    border-color: #ef7998;
+    color: #ef7998
+}
+.cacher button:last-of-type:hover{
+    background-color: #ef7998;
+    color: black
+}
+header{
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-right: 12px;
+    margin-bottom: 50px;
+    background-color: rgb(238,238,238);    
+}
+header .fa-birthday-cake{
+    font-size: 32px;
+    color: #ef7998;
+    float: left;
+    margin-right: 12%;
+    cursor: pointer
+}
+header .directories{
+    margin-right: 5%;
+}
+header .directories h3{
+    float: left;
+    color: #ef7998;
+    line-height: 12px;
+    cursor: pointer
+}
+header .directories h3:nth-child(2){
+    margin-left: 3%;
+    margin-right: 3%
+}
+header .directories h3:hover,header .fa-birthday-cake:hover{
+    color: black
+}
+header .contact{
+    width: 19%;
+    float: left;
+    line-height: 0px;
+    margin-left: 9%
+}
+header .contact i{
+    position: relative;
+    top: 12px;
+    float: left;
+    line-height: 0;
+    margin-top: 5%;
+}
+header .cart{
+    height: 32px;
+    width: 7%;
+    float: right;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding-left: 1%;
+    cursor: pointer;
+    text-align: center
+}
+header .cart i{
+    position: relative;
+    top: 12px;
+    float: left;
+    line-height: 0;
+    margin-top: 1%
+}
+header .cart h4{
+    position: relative;
+    bottom: 12px;
+}
+header .cart:hover{
+    color: white;
+    background-color: #ef7998
+}
+
+.main {
+    background-image: url(../images/main.jpg);
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-top: 15%;        
+    font-family: 'Gochi Hand', cursive;
+    padding-bottom: 0;
+}
+.main h4{
+    color: white;
+    font-size: 42px;
+}
+.main span{
+    color: #ef7998;
+    font-size: 50px
+}
+.main button,.about button{
+    font-size: 32px;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 32px;
+    background-color: transparent;
+    border-radius: 9px;
+    font-family: 'Gochi Hand', cursive;
+}
+.main button:hover{
+    color: #ef7998;
+    background-color: black;
+}
+.about{
+    margin-bottom: 120px;
+    height : 300px
+/*    background-color: white;*/
+}
+.about div:first-of-type{
+    width: 30%;
+    text-align: left;
+    padding-left: 52px;
+    margin-bottom: 12px;
+    float: left;
+    padding-top: 30px
+}
+.about button{
+    font-size: 17px;
+    color: black;
+    border: 1px solid black;
+    padding: 2px 8px
+}
+.about div:nth-child(2){
+    width: 40%;
+    float: right;
+    padding-top: 30px;
+    position: relative;
+}
+.about div:nth-child(2) img{
+    width: 70%;
+    margin-top: 35%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.about div:nth-child(2) div{
+    height: 153.5px;
+    width: 55%;
+    background-color: transparent;
+    margin-top: 35%;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    border: 5px solid gold;
+    transition: all .5s ease-out     
+}
+.about div:nth-child(2) img:hover + .banner {
+    top: -5px;
+    left: -5px
+}
+
+
+
+
+
+.btns{
+    font-family: 'Gochi Hand', cursive;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.btns h3{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 42px;
+}
+.btns span{
+    color: #ef7998;
+    font-size: 52px
+}
+.btns button{
+    font-family: 'Gochi Hand', cursive;
+    border: 2px solid black;
+    padding: 3px 12px;
+    margin-right: 17px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btns button:hover{
+    background-color: black;
+    color: #ef7998
+}
+.search{
+    margin-bottom: 40px
+}
+.search i {
+    background-color: #ef7998;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer
+}
+.search input{
+    padding-left: 12px;
+    height: 22px;
+    border-radius: 3px;
+    border: none;
+    width: 300px;
+    font-family: 'Gochi Hand', cursive;
+}
+.images{
+    width: 80%;
+    margin-left: 10%;
+    background-color: green;
+}
+.images .image{
+    position: relative;
+    width: 100%;
+}
+.images .image img{
+    width: 100%;
+}
+.images .image:hover > .fa-cart-plus{
+    display: block
+}
+.images div .fa-cart-plus{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    background-color: #ef7998;
+    font-size: 32px;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer
+}
+.images div{
+    width: 30%;
+    float: left;
+}
+.images .mid{
+    margin-left: 5%;
+    margin-right: 5%
+}
+.images div div:last-of-type{
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    padding-bottom: 14px;
+    margin-bottom: 20px
+}
+.images h4{
+    float: left;
+    margin-left: 22px;
+}
+.images h5{
+    float: right;
+    margin-right: 22px
 }
